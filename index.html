@@ -1,0 +1,112 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anivana Ludo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <h1>Anivana Ludo</h1>
+
+    <button id="soundBtn">🔊</button>
+  </div>
+
+  <!-- HOME SCREEN -->
+  <div class="home-screen" id="homeScreen">
+
+    <div class="menu-box">
+      <button class="menu-btn" onclick="startGame('blue')">
+        BLUE ALWAYS WIN
+      </button>
+
+      <button class="menu-btn" onclick="startGame('red')">
+        RED ALWAYS WIN
+      </button>
+
+      <button class="menu-btn" onclick="startGame('green')">
+        GREEN ALWAYS WIN
+      </button>
+
+      <button class="menu-btn" onclick="startGame('yellow')">
+        YELLOW ALWAYS WIN
+      </button>
+    </div>
+
+  </div>
+
+  <!-- GAME BOARD -->
+  <div class="game-screen hidden" id="gameScreen">
+
+    <!-- BOARD -->
+    <div class="board">
+
+      <!-- BLUE -->
+      <div class="home blue-home">
+        <div class="token blue" id="blueToken"></div>
+      </div>
+
+      <!-- RED -->
+      <div class="home red-home">
+        <div class="token red"></div>
+      </div>
+
+      <!-- GREEN -->
+      <div class="home green-home">
+        <div class="token green"></div>
+      </div>
+
+      <!-- YELLOW -->
+      <div class="home yellow-home">
+        <div class="token yellow"></div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="center-box">
+        WIN
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+
+      <h2 id="turnText">Blue Turn</h2>
+
+      <div class="dice" id="dice">
+        🎲
+      </div>
+
+      <button class="roll-btn" onclick="rollDice()">
+        Roll Dice
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- WIN POPUP -->
+  <div class="popup hidden" id="popup">
+
+    <div class="popup-box">
+
+      <h1 id="winnerText">BLUE WINS</h1>
+
+      <button onclick="restartGame()">
+        Play Again
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
